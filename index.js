@@ -1,4 +1,9 @@
-const angka = [10,20,30,40,50]
+const data1 = [10,20]
+const data2 = [30,40,50]
+const angka = [
+    ...data1,
+    ...data2
+]
 
 // MAX
 let max = angka[0]
