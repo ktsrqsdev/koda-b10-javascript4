@@ -4,7 +4,9 @@ flowchart LR
     start((START))
     stop(((STOP)))
 
-    array["angka = [10,20,30,40,50]"]
+    array["data1 = [10,20]"]
+    array2["data2 = [30,40,50]"]
+    angka["angka"]
     max["max = angka[0]"]
     I[i = 0]
     reassign["max = angka[i]"]
@@ -16,7 +18,9 @@ flowchart LR
 
 
     start --> array
-    array --> max
+    array --> array2
+    array2 --> angka
+    angka --> max
     max --> I
     I --> konI
     konI --TRUE--> cekmax
@@ -36,7 +40,9 @@ flowchart LR
     start((START))
     stop(((STOP)))
 
-    array["angka = [10,20,30,40,50]"]
+    array["data1 = [10,20]"]
+    array2["data2 = [30,40,50]"]
+    angka["angka"]
     min["min = angka[0]"]
     I[i = 0]
     reassign["min = angka[i]"]
@@ -50,7 +56,9 @@ flowchart LR
 
 
     start --> array
-    array --> min
+    array --> array2
+    array2 --> angka
+    angka --> min
     min --> I
     I --> konI
     konI --TRUE--> cekmin
@@ -73,7 +81,9 @@ flowchart LR
 
     konI{i < angka.length}
 
-    array["angka = [10,20,30,40,50]"]
+    array["data1 = [10,20]"]
+    array2["data2 = [30,40,50]"]
+    angka["angka"]
     total[total = 0]
     addTotal["total += angka[i]"]
     average[average = total / angka.length]
@@ -82,7 +92,9 @@ flowchart LR
 
 
     start --> array
-    array --> total
+    array --> array2
+    array2 --> angka
+    angka --> total
     total --> konI
     konI --TRUE--> addTotal
     addTotal --> loop
