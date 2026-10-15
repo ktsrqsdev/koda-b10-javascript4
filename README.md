@@ -78,7 +78,7 @@ flowchart LR
     total[total = 0]
     addTotal["total += angka[i]"]
     average[average = total / angka.length]
-    output[average]
+    output[/average/]
     loop[i++]
 
 
